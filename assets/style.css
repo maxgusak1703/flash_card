@@ -1,0 +1,16 @@
+.card-display {
+    background-color: @card_bg_color;
+    border: 1px solid @borders;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 1.4em;
+}
+.title-text { 
+    font-weight: 800; 
+    font-size: 1.2em; 
+}
+.answer-text { 
+    color: @success_color; 
+    font-weight: bold; 
+}

@@ -1,0 +1,13 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyd
+*.so
+.pytest_cache/
+venv/
+env/
+brainvault_config.json
+brainvault_db.json
+.vscode/
+.idea/
+*.gresource
