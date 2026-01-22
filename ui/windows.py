@@ -15,7 +15,6 @@ class MainWindow(Adw.ApplicationWindow):
         self.set_default_size(1100, 700)
         self.manager = DataManager()
         
-        # ... (Код побудови UI MainWindow без змін, лише імпорти замінені) ...
         self.split_view = Adw.OverlaySplitView()
         self.split_view.set_sidebar_width_fraction(0.25); self.split_view.set_min_sidebar_width(250)
         self.sidebar_list = Gtk.ListBox(); self.sidebar_list.add_css_class("navigation-sidebar")
@@ -38,7 +37,6 @@ class MainWindow(Adw.ApplicationWindow):
         home_page = Adw.NavigationPage(title="Home", tag="home"); home_page.set_child(home_toolbar); self.nav_view.add(home_page); self.split_view.set_content(self.nav_view)
         self.toast_overlay = Adw.ToastOverlay(); self.toast_overlay.set_child(self.split_view); self.set_content(self.toast_overlay); self.refresh_sidebar()
 
-    # ... (Усі методи MainWindow – без змін) ...
     def refresh_sidebar(self):
         self.sidebar_list.remove_all(); folders = self.manager.get_folders()
         for f in folders:
@@ -76,8 +74,7 @@ class App(Adw.Application):
 
     def do_startup(self):
         Adw.Application.do_startup(self)
-        
-        # Завантаження CSS з окремого файлу
+
         css_provider = Gtk.CssProvider()
         try:
             css_provider.load_from_path(CSS_FILE)
