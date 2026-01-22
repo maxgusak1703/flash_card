@@ -15,8 +15,7 @@ class AIGeneratorDialog(Adw.Window):
         self.manager = manager
         self.config = ConfigManager()
         self.on_success = on_success_callback
-        
-        # ... (Код побудови UI діалогу без змін) ...
+
         content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         header = Adw.HeaderBar(); header.set_show_end_title_buttons(False)
         btn_close = Gtk.Button(icon_name="window-close-symbolic")
